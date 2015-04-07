@@ -104,10 +104,14 @@ version_markdown = 1
 # Exceptions
 #
 
-class NonImplementeException(Exception):
+### REWRITE ###
+
+class NomBaseError(ValueError):
     pass
 
-class NomBaseException(Exception):
+### END REWRITE ###
+
+class NonImplementeException(Exception):
     pass
 
 class FondationNonUniqueException(Exception):
@@ -117,6 +121,10 @@ class FondationNonTrouveeException(Exception):
     pass
 
 class FichierNonExistantException(Exception):
+    pass
+
+# déprécié au profit de NomBaseError
+class NomBaseException(ValueError):
     pass
 
 '''
